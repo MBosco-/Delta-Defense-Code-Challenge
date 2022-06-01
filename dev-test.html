@@ -70,7 +70,7 @@
 			<div class="row">
 				<!-- page content -->
 				<div class="col-12 col-lg-5 py-3">
-					<div class="left-content content-block" id="content-block1">
+					<div class="left-content content-block">
 						<h3>Online Community</h3>
 						<p>Join fun, gun-friendly conversations with more than 80,000 like-minded Americans on our own ad-free social media platform</p>
 						<svg xmlns="http://www.w3.org/2000/svg">
@@ -97,7 +97,7 @@
 				<div class="col-12 col-lg-6 rounded py-3">
 					<!-- rightside content layer hovering over hero black background -->
 					<div class="c">
-						<div class="content-block" id="content-block2">
+						<div class="content-block" id="topmost-content">
 							<h3>Expert Customer Engagement Team</h3>
 							<p>100% American-based, the Delta Defense Team are expertly trained on all USCCA products and will help you with any questions you may have</p>
 							<svg xmlns="http://www.w3.org/2000/svg">
@@ -113,7 +113,7 @@
 							</svg>
 						</div>
 
-						<div class="content-block">
+						<div class="content-block" id="lowest-content">
 							<h3>Nationwide Attorney Network</h3>
 							<p>When choosing your criminal defense attorney, you may select a name you already trust or you can handpick one from our growing, nationwide network of more than 1,200 attorneys.</p>
 							<svg xmlns="http://www.w3.org/2000/svg">
@@ -159,11 +159,11 @@
 						//the content-block is on the right
 						var x1 = origin.offset().left;
 					}
-					var y1 = origin.offset().top;
+					var y1 = origin.offset().top+(origin.height()/2);
 					
 					//set target
 					var x2 = target.offset().left+target.width()/2;
-					var y2 = origin.offset().top;
+					var y2 = origin.offset().top+(origin.height()/2);
 
 					//alter this line's attributes to draw to the centerline of the dotted-element
 					line
@@ -180,15 +180,18 @@
 				});
 
 				//draw the center column
-
 				var dots = $("#dots");
 				var target = $("#dotted-element");
 
+				//build some reference for the endpoints
+				var topmost = $("#topmost-content");
+				var lowest = $("#lowest-content");
+
 				var x1 = target.offset().left+(target.width()/2);
-				var y1 = target.offset().top;
+				var y1 = topmost.offset().top+(topmost.height()/2);
 
 				var x2 = x1;
-				var y2 = target.offset().top+target.height();
+				var y2 = lowest.offset().top+(lowest.height()/2);
 
 				dots
 				  .attr('x1', x1)
