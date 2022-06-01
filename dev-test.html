@@ -88,8 +88,8 @@
 				<div class="col-lg-1 py-3">
 					<!-- dotted border element -->
 					<svg xmlns="http://www.w3.org/2000/svg">
-					  <line id="dots" class="line original" stroke-dasharray="5, 5" stroke="black"/>
-					  <circle id="bullet" class="circle original" cx="10" xy="10" fill="orange"/>
+					  <line id="dots" class="line original" stroke-dasharray="5, 5"/>
+					  <circle id="bullet" class="circle original" cx="3" cy="800" r="6"/>
 					</svg>
 					<div id="dotted-element"></div>
 					<!-- /end dotted border element -->
@@ -142,10 +142,12 @@
 
 				//for each content block, draw the dotted line
 				$(".content-block").each(function(){
-					//create new line with svg to draw
+					//create new line and circle with svg to draw
 					$("#dots").clone().addClass("clone").removeClass("original").removeAttr("id").appendTo($(this).children("svg"));
+					$("#bullet").clone().addClass("clone").removeClass("original").removeAttr("id").appendTo($(this).children("svg"));
 					//references for clarity
-					var line = $(this).find(".clone");
+					var line = $(this).find("line.clone");
+					var circle = $(this).find("circle.clone");
 					var origin = $(this);
 					var target = $("#dotted-element");
 
@@ -169,6 +171,12 @@
 					  .attr('y1', y1)
 					  .attr('x2', x2)
 					  .attr('y2', y2);
+
+					//we're drawing the line from the container (origin) to the responsive 
+					//column inbetween (target), so the circle draws at the origin side
+					circle
+					  .attr('cx', x1)
+					  .attr('cy', y1)
 				});
 
 				//draw the center column

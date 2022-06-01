@@ -57,5 +57,9 @@ svg{
 }
 .line{
 	stroke-width:2px;
-  	stroke:rgb(0,0,0);
+  	stroke:#B88E33;
+}
+.circle{
+	stroke:#B88E33;
+	fill:#B88E33;
 }
