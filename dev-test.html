@@ -127,12 +127,23 @@
 		</div>
 		<script type='text/javascript'>
 			function draw(){
+				//remove old svgs for resize
+				//find every clone line and delete them
+				$(".clone").each(function(){
+					$(this).remove();
+				});
+
+				//remote attrs from the vertical template line
+				$(this).find(".original")
+					.attr('x1', 0)
+					 .attr('y1', 0)
+					 .attr('x2', 0)
+					 .attr('y2', 0);
+
 				//for each content block, draw the dotted line
 				$(".content-block").each(function(){
-					//remove old svgs
-
 					//create new line with svg to draw
-					$("#dots").clone().addClass("clone").removeAttr("id").appendTo($(this).children("svg"));
+					$("#dots").clone().addClass("clone").removeClass("original").removeAttr("id").appendTo($(this).children("svg"));
 					//references for clarity
 					var line = $(this).find(".clone");
 					var origin = $(this);
