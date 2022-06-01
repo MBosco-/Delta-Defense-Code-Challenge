@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- boostrap includes -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<link rel="stylesheet" href="assets/dev-test.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+	</head>
+
+	<body>
+		<!-- sticky header -->
+		<header class="sticky-header">
+			<!-- Upper dark header -->
+			<div class="container-fluid bg-black">
+				<div class="container">
+					<div class="row">
+						<div class="col-6 view-left">
+							<a class="navbar-brand" href="https://uscca.deltadefense.com/">
+								<img class="icon py-2" src="img/white_uscca_logo.svg" />
+							</a>		
+						</div>
+						<div class="col-6 view-right">
+							<a class="presented-by position-relative float-end px-1 py-1" href="#">
+								<span class="fs-12 position-absolute bottom-0 start-0">Presented By:</span>
+								<img class="icon" src="img/grey_deltadefense_logo.svg" />
+							</a>	
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /end upper dark header -->
+			<!-- Lower grey portion of header -->
+			<div class="container-fluid">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="header-banner d-flex justify-content-end">
+								<span class="help-text">
+									Here to Help 24/7: <a class="pl-2" href="tel:855-762-9031">800-674-9779 </a>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End lower grey portion of header -->
+		</header>
+		<div class="container-fluid bg-black">
+			<!-- hero  -->
+			<div class="text-secondary px-4 py-5 text-center">
+				<div class="container">
+				    <div class="py-5 row">
+			      		<div class="col-lg-6">
+					        <img src="img/grey_icons.svg" />
+				      	</div>
+				      	<div class="col-lg-6">
+				      		<!-- !TODO blue circle 4 -->
+				      		<a href="#">
+				      			<img class="float-start" src="img/community.svg" />
+				      		</a>
+				      	</div>
+				    </div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<!-- page content -->
+				<div class="col-12 col-lg-5 py-3">
+					<div class="left-content content-block" id="content-block1">
+						<h3>Online Community</h3>
+						<p>Join fun, gun-friendly conversations with more than 80,000 like-minded Americans on our own ad-free social media platform</p>
+						<svg xmlns="http://www.w3.org/2000/svg">
+							<!-- Dynamic injection space -->
+						</svg>
+					</div>
+					<div class="left-content content-block">
+						<h3>24/7 Critical Response Team Emergency Support</h3>
+						<p>After a self-defense incident, your first call should be to 9-1-1, and your second call will be to this emergency support team who will be your guide through the unanticipated fog of a self‑defense incident.</p>
+						<svg xmlns="http://www.w3.org/2000/svg">
+							<!-- Dynamic injection space -->
+						</svg>
+					</div>
+				</div>
+				<div class="col-lg-1 py-3">
+					<!-- dotted border element -->
+					<svg xmlns="http://www.w3.org/2000/svg">
+					  <line id="dots" class="line original" stroke-dasharray="5, 5" stroke="black"/>
+					  <circle id="bullet" class="circle original" cx="10" xy="10" fill="orange"/>
+					</svg>
+					<div id="dotted-element"></div>
+					<!-- /end dotted border element -->
+				</div>
+				<div class="col-12 col-lg-6 rounded py-3">
+					<!-- rightside content layer hovering over hero black background -->
+					<div class="c">
+						<div class="content-block" id="content-block2">
+							<h3>Expert Customer Engagement Team</h3>
+							<p>100% American-based, the Delta Defense Team are expertly trained on all USCCA products and will help you with any questions you may have</p>
+							<svg xmlns="http://www.w3.org/2000/svg">
+								<!-- Dynamic injection space -->
+							</svg>
+						</div>
+
+						<div class="content-block">
+							<h3>Free Entry to Annual USCCA Expo</h3>
+							<p>USCCA Members get FREE entry to the annual USCCA Concealed Carry & Home Defense Expo [Headed to Fort Worth, TX in November 2022!]</p>
+							<svg xmlns="http://www.w3.org/2000/svg">
+								<!-- Dynamic injection space -->
+							</svg>
+						</div>
+
+						<div class="content-block">
+							<h3>Nationwide Attorney Network</h3>
+							<p>When choosing your criminal defense attorney, you may select a name you already trust or you can handpick one from our growing, nationwide network of more than 1,200 attorneys.</p>
+							<svg xmlns="http://www.w3.org/2000/svg">
+								<!-- Dynamic injection space -->
+							</svg>
+						</div>
+					</div>
+				</div>
+			<!-- /end page content -->
+			</div>
+		</div>
+		<script type='text/javascript'>
+			function draw(){
+				//for each content block, draw the dotted line
+				$(".content-block").each(function(){
+					//remove old svgs
+
+					//create new line with svg to draw
+					$("#dots").clone().addClass("clone").removeAttr("id").appendTo($(this).children("svg"));
+					//references for clarity
+					var line = $(this).find(".clone");
+					var origin = $(this);
+					var target = $("#dotted-element");
+
+					//set origin
+					if(Math.abs(origin.offset().left - target.offset().left) > Math.abs(origin.offset().left+origin.width() - target.offset().left)){
+						//the content-block is on the left
+						var x1 = origin.offset().left+origin.width();
+					} else {
+						//the content-block is on the right
+						var x1 = origin.offset().left;
+					}
+					var y1 = origin.offset().top;
+					
+					//set target
+					var x2 = target.offset().left+target.width()/2;
+					var y2 = origin.offset().top;
+
+					//alter this line's attributes to draw to the centerline of the dotted-element
+					line
+					  .attr('x1', x1)
+					  .attr('y1', y1)
+					  .attr('x2', x2)
+					  .attr('y2', y2);
+				});
+
+				//draw the center column
+
+				var dots = $("#dots");
+				var target = $("#dotted-element");
+
+				var x1 = target.offset().left+(target.width()/2);
+				var y1 = target.offset().top;
+
+				var x2 = x1;
+				var y2 = target.offset().top+target.height();
+
+				dots
+				  .attr('x1', x1)
+				  .attr('y1', y1)
+				  .attr('x2', x2)
+				  .attr('y2', y2);
+			}
+			
+
+
+			draw();
+			window.addEventListener('resize', draw);
+  		</script>
+	</body>
+</html>
