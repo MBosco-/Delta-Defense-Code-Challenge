@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<!-- boostrap includes -->
+		<!-- boostrap 5.2 includes -->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
+		<!-- jQuery 3.6 include  -->
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-		<link rel="stylesheet" href="assets/dev-test.css">
+
+		<!-- Google fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+
+		<link rel="stylesheet" href="assets/dev-test.css">
 	</head>
 
 	<body>
@@ -211,8 +215,6 @@
 					.attr('x2', 0)
 					.attr('y2', 0);
 
-				
-
 				//if it isn't display:none, draw the connector for the mobile content 
 				if($(".mobile-content").css('display') !== 'none'){
 					//for each mobile content block, draw the dotted line
@@ -234,9 +236,9 @@
 							//the content-block is on the right
 							var x1 = origin.offset().left;
 						}
+
+						//build relation and set target
 						var y1 = origin.offset().top+(origin.height()/2);
-						
-						//set target
 						var x2 = target.offset().left+target.width()/2;
 						var y2 = origin.offset().top+(origin.height()/2);
 
@@ -262,12 +264,13 @@
 					var topmost = $("#topmost-content-mobile");
 					var lowest = $("#lowest-content-mobile");
 
+					//set our offsets relative to the content blocks
 					var x1 = target.offset().left+(target.width()/2);
 					var y1 = topmost.offset().top+(topmost.height()/2);
-
 					var x2 = x1;
 					var y2 = lowest.offset().top+(lowest.height()/2);
 
+					//set the attr attributes inline with these function calls
 					dots
 					  .attr('x1', x1)
 					  .attr('y1', y1)
@@ -321,24 +324,24 @@
 					var topmost = $("#topmost-content");
 					var lowest = $("#lowest-content");
 
+					//set our offsets relative to the content blocks
 					var x1 = target.offset().left+(target.width()/2);
 					var y1 = topmost.offset().top+(topmost.height()/2);
-
 					var x2 = x1;
 					var y2 = lowest.offset().top+(lowest.height()/2);
 
+					//set inline attributes with these function calls
 					dots
 					  .attr('x1', x1)
 					  .attr('y1', y1)
 					  .attr('x2', x2)
 					  .attr('y2', y2);
-
 				}
-
-				
 			}
 			
+			//Call the function for first pageload
 			draw();
+			//Add resize event listener for subsequent redraws
 			window.addEventListener('resize', draw);
   		</script>
 	</body>
