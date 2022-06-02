@@ -33,7 +33,7 @@
 			</div>
 			<!-- /end upper dark header -->
 			<!-- Lower grey portion of header -->
-			<div class="container-fluid">
+			<div class="container-fluid bg-white">
 				<div class="container">
 					<div class="row">
 						<div class="col-12">
@@ -53,10 +53,10 @@
 			<div class="text-secondary px-4 py-5 text-center">
 				<div class="container">
 				    <div class="py-5 row">
-			      		<div class="col-lg-6">
+			      		<div class="col-md-6">
 					        <img src="img/grey_icons.svg" />
 				      	</div>
-				      	<div class="col-lg-6">
+				      	<div class="col-md-6">
 				      		<!-- !TODO blue circle 4 -->
 				      		<a href="#">
 				      			<img class="float-start" src="img/community.svg" />
@@ -66,26 +66,32 @@
 				</div>
 			</div>
 		</div>
-		<div class="container">
+		<!-- the desktop/mobile distinction is purely to maintain the order of content for this test. 
+			Otherwise I'd just pull left the dotted border element on mobile and calculate from there  -->
+		<div class="container desktop-content">
 			<div class="row">
 				<!-- page content -->
-				<div class="col-12 col-lg-5 py-3">
-					<div class="left-content content-block">
-						<h3>Online Community</h3>
-						<p>Join fun, gun-friendly conversations with more than 80,000 like-minded Americans on our own ad-free social media platform</p>
+				<div class="col-12 col-md-5 py-3">
+					<div class="content-block">
+						<div class="content-inner">
+							<h3>Online Community</h3>
+							<p>Join fun, gun-friendly conversations with more than 80,000 like-minded Americans on our own ad-free social media platform</p>
+						</div>
 						<svg xmlns="http://www.w3.org/2000/svg">
 							<!-- Dynamic injection space -->
 						</svg>
 					</div>
-					<div class="left-content content-block">
-						<h3>24/7 Critical Response Team Emergency Support</h3>
-						<p>After a self-defense incident, your first call should be to 9-1-1, and your second call will be to this emergency support team who will be your guide through the unanticipated fog of a self‑defense incident.</p>
+					<div class="content-block">
+						<div class="content-inner">
+							<h3>24/7 Critical Response Team Emergency Support</h3>
+							<p>After a self-defense incident, your first call should be to 9-1-1, and your second call will be to this emergency support team who will be your guide through the unanticipated fog of a self‑defense incident.</p>
+						</div>
 						<svg xmlns="http://www.w3.org/2000/svg">
 							<!-- Dynamic injection space -->
 						</svg>
 					</div>
 				</div>
-				<div class="col-lg-1 py-3">
+				<div class="col-md-1 py-3">
 					<!-- dotted border element -->
 					<svg xmlns="http://www.w3.org/2000/svg">
 					  <line id="dots" class="line original" stroke-dasharray="5, 5"/>
@@ -94,35 +100,100 @@
 					<div id="dotted-element"></div>
 					<!-- /end dotted border element -->
 				</div>
-				<div class="col-12 col-lg-6 rounded py-3">
+				<div class="col-12 col-md-6 rounded overlap py-3">
 					<!-- rightside content layer hovering over hero black background -->
-					<div class="c">
-						<div class="content-block" id="topmost-content">
+					<div class="content-block" id="topmost-content">
+						<div class="content-inner">
 							<h3>Expert Customer Engagement Team</h3>
 							<p>100% American-based, the Delta Defense Team are expertly trained on all USCCA products and will help you with any questions you may have</p>
-							<svg xmlns="http://www.w3.org/2000/svg">
-								<!-- Dynamic injection space -->
-							</svg>
 						</div>
+						<svg xmlns="http://www.w3.org/2000/svg">
+							<!-- Dynamic injection space -->
+						</svg>
+					</div>
 
-						<div class="content-block">
+					<div class="content-block">
+						<div class="content-inner">
 							<h3>Free Entry to Annual USCCA Expo</h3>
 							<p>USCCA Members get FREE entry to the annual USCCA Concealed Carry & Home Defense Expo [Headed to Fort Worth, TX in November 2022!]</p>
-							<svg xmlns="http://www.w3.org/2000/svg">
-								<!-- Dynamic injection space -->
-							</svg>
 						</div>
+						<svg xmlns="http://www.w3.org/2000/svg">
+							<!-- Dynamic injection space -->
+						</svg>
+					</div>
 
-						<div class="content-block" id="lowest-content">
+					<div class="content-block" id="lowest-content">
+						<div class="content-inner">
 							<h3>Nationwide Attorney Network</h3>
 							<p>When choosing your criminal defense attorney, you may select a name you already trust or you can handpick one from our growing, nationwide network of more than 1,200 attorneys.</p>
-							<svg xmlns="http://www.w3.org/2000/svg">
-								<!-- Dynamic injection space -->
-							</svg>
 						</div>
+						<svg xmlns="http://www.w3.org/2000/svg">
+							<!-- Dynamic injection space -->
+						</svg>
 					</div>
 				</div>
 			<!-- /end page content -->
+			</div>
+		</div>
+		<div class="container mobile-content">
+			<div class="row">
+				<!-- mobile connectors -->
+				<div class="col-1">
+					<!-- dotted border element -->
+					<svg xmlns="http://www.w3.org/2000/svg">
+					  <line id="dots-mobile" class="line original" stroke-dasharray="5, 5"/>
+					  <circle id="bullet-mobile" class="circle original" cx="0" cy="0" r="6"/>
+					</svg>
+					<div id="dotted-element-mobile"></div>
+					<!-- /end dotted border element -->
+				</div>
+				<div class="col-11 rounded overlap py-3">
+					<div class="content-block" id="topmost-content-mobile">
+						<div class="content-inner">
+							<h3>Online Community</h3>
+							<p>Join fun, gun-friendly conversations with more than 80,000 like-minded Americans on our own ad-free social media platform</p>
+						</div>
+						<svg xmlns="http://www.w3.org/2000/svg">
+							<!-- Dynamic injection space -->
+						</svg>
+					</div>
+					<div class="content-block">
+						<div class="content-inner">
+							<h3>Expert Customer Engagement Team</h3>
+							<p>100% American-based, the Delta Defense Team are expertly trained on all USCCA products and will help you with any questions you may have</p>
+						</div>
+						<svg xmlns="http://www.w3.org/2000/svg">
+							<!-- Dynamic injection space -->
+						</svg>
+					</div>
+					<div class="content-block">
+						<div class="content-inner">
+							<h3>Free Entry to Annual USCCA Expo</h3>
+							<p>USCCA Members get FREE entry to the annual USCCA Concealed Carry & Home Defense Expo [Headed to Fort Worth, TX in November 2022!]</p>
+						</div>
+						<svg xmlns="http://www.w3.org/2000/svg">
+							<!-- Dynamic injection space -->
+						</svg>
+					</div>
+					<div class="content-block">
+						<div class="content-inner">
+							<h3>24/7 Critical Response Team Emergency Support</h3>
+							<p>After a self-defense incident, your first call should be to 9-1-1, and your second call will be to this emergency support team who will be your guide through the unanticipated fog of a self‑defense incident.</p>
+						</div>
+						<svg xmlns="http://www.w3.org/2000/svg">
+							<!-- Dynamic injection space -->
+						</svg>
+					</div>
+					<div class="content-block" id="lowest-content-mobile">
+						<div class="content-inner">
+							<h3>Nationwide Attorney Network</h3>
+							<p>When choosing your criminal defense attorney, you may select a name you already trust or you can handpick one from our growing, nationwide network of more than 1,200 attorneys.</p>
+						</div>
+						<svg xmlns="http://www.w3.org/2000/svg">
+							<!-- Dynamic injection space -->
+						</svg>
+					</div>
+				</div>
 			</div>
 		</div>
 		<script type='text/javascript'>
@@ -136,68 +207,135 @@
 				//remote attrs from the vertical template line
 				$(this).find(".original")
 					.attr('x1', 0)
-					 .attr('y1', 0)
-					 .attr('x2', 0)
-					 .attr('y2', 0);
+					.attr('y1', 0)
+					.attr('x2', 0)
+					.attr('y2', 0);
 
-				//for each content block, draw the dotted line
-				$(".content-block").each(function(){
-					//create new line and circle with svg to draw
-					$("#dots").clone().addClass("clone").removeClass("original").removeAttr("id").appendTo($(this).children("svg"));
-					$("#bullet").clone().addClass("clone").removeClass("original").removeAttr("id").appendTo($(this).children("svg"));
-					//references for clarity
-					var line = $(this).find("line.clone");
-					var circle = $(this).find("circle.clone");
-					var origin = $(this);
+				
+
+				//if it isn't display:none, draw the connector for the mobile content 
+				if($(".mobile-content").css('display') !== 'none'){
+					//for each mobile content block, draw the dotted line
+					$(".content-block").each(function(){
+						//create new line and circle with svg to draw
+						$("#dots-mobile").clone().addClass("clone").removeClass("original").removeAttr("id").appendTo($(this).children("svg"));
+						$("#bullet-mobile").clone().addClass("clone").removeClass("original").removeAttr("id").appendTo($(this).children("svg"));
+						//references for clarity
+						var line = $(this).find("line.clone");
+						var circle = $(this).find("circle.clone");
+						var origin = $(this);
+						var target = $("#dotted-element-mobile");
+
+						//set origin
+						if(Math.abs(origin.offset().left - target.offset().left) > Math.abs(origin.offset().left+origin.width() - target.offset().left)){
+							//the content-block is on the left
+							var x1 = origin.offset().left+origin.width();
+						} else {
+							//the content-block is on the right
+							var x1 = origin.offset().left;
+						}
+						var y1 = origin.offset().top+(origin.height()/2);
+						
+						//set target
+						var x2 = target.offset().left+target.width()/2;
+						var y2 = origin.offset().top+(origin.height()/2);
+
+						//alter this line's attributes to draw to the centerline of the dotted-element
+						line
+						  .attr('x1', x1)
+						  .attr('y1', y1)
+						  .attr('x2', x2)
+						  .attr('y2', y2);
+
+						//we're drawing the line from the container (origin) to the responsive 
+						//column inbetween (target), so the circle draws at the origin side
+						circle
+						  .attr('cx', x1)
+						  .attr('cy', y1)
+					});
+
+					//draw the center column
+					var dots = $("#dots-mobile");
+					var target = $("#dotted-element-mobile");
+
+					//build some reference for the endpoints
+					var topmost = $("#topmost-content-mobile");
+					var lowest = $("#lowest-content-mobile");
+
+					var x1 = target.offset().left+(target.width()/2);
+					var y1 = topmost.offset().top+(topmost.height()/2);
+
+					var x2 = x1;
+					var y2 = lowest.offset().top+(lowest.height()/2);
+
+					dots
+					  .attr('x1', x1)
+					  .attr('y1', y1)
+					  .attr('x2', x2)
+					  .attr('y2', y2);
+				} else { //else, draw the connectors for the desktop/tablet view
+					//for each content block, draw the dotted line
+					$(".content-block").each(function(){
+						//create new line and circle with svg to draw
+						$("#dots").clone().addClass("clone").removeClass("original").removeAttr("id").appendTo($(this).children("svg"));
+						$("#bullet").clone().addClass("clone").removeClass("original").removeAttr("id").appendTo($(this).children("svg"));
+						//references for clarity
+						var line = $(this).find("line.clone");
+						var circle = $(this).find("circle.clone");
+						var origin = $(this);
+						var target = $("#dotted-element");
+
+						//set origin
+						if(Math.abs(origin.offset().left - target.offset().left) > Math.abs(origin.offset().left+origin.width() - target.offset().left)){
+							//the content-block is on the left
+							var x1 = origin.offset().left+origin.width();
+						} else {
+							//the content-block is on the right
+							var x1 = origin.offset().left;
+						}
+						var y1 = origin.offset().top+(origin.height()/2);
+						
+						//set target
+						var x2 = target.offset().left+target.width()/2;
+						var y2 = origin.offset().top+(origin.height()/2);
+
+						//alter this line's attributes to draw to the centerline of the dotted-element
+						line
+						  .attr('x1', x1)
+						  .attr('y1', y1)
+						  .attr('x2', x2)
+						  .attr('y2', y2);
+
+						//we're drawing the line from the container (origin) to the responsive 
+						//column inbetween (target), so the circle draws at the origin side
+						circle
+						  .attr('cx', x1)
+						  .attr('cy', y1)
+					});
+
+					//draw the center column
+					var dots = $("#dots");
 					var target = $("#dotted-element");
 
-					//set origin
-					if(Math.abs(origin.offset().left - target.offset().left) > Math.abs(origin.offset().left+origin.width() - target.offset().left)){
-						//the content-block is on the left
-						var x1 = origin.offset().left+origin.width();
-					} else {
-						//the content-block is on the right
-						var x1 = origin.offset().left;
-					}
-					var y1 = origin.offset().top+(origin.height()/2);
-					
-					//set target
-					var x2 = target.offset().left+target.width()/2;
-					var y2 = origin.offset().top+(origin.height()/2);
+					//build some reference for the endpoints
+					var topmost = $("#topmost-content");
+					var lowest = $("#lowest-content");
 
-					//alter this line's attributes to draw to the centerline of the dotted-element
-					line
+					var x1 = target.offset().left+(target.width()/2);
+					var y1 = topmost.offset().top+(topmost.height()/2);
+
+					var x2 = x1;
+					var y2 = lowest.offset().top+(lowest.height()/2);
+
+					dots
 					  .attr('x1', x1)
 					  .attr('y1', y1)
 					  .attr('x2', x2)
 					  .attr('y2', y2);
 
-					//we're drawing the line from the container (origin) to the responsive 
-					//column inbetween (target), so the circle draws at the origin side
-					circle
-					  .attr('cx', x1)
-					  .attr('cy', y1)
-				});
+				}
 
-				//draw the center column
-				var dots = $("#dots");
-				var target = $("#dotted-element");
-
-				//build some reference for the endpoints
-				var topmost = $("#topmost-content");
-				var lowest = $("#lowest-content");
-
-				var x1 = target.offset().left+(target.width()/2);
-				var y1 = topmost.offset().top+(topmost.height()/2);
-
-				var x2 = x1;
-				var y2 = lowest.offset().top+(lowest.height()/2);
-
-				dots
-				  .attr('x1', x1)
-				  .attr('y1', y1)
-				  .attr('x2', x2)
-				  .attr('y2', y2);
+				
 			}
 			
 
