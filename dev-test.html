@@ -12,20 +12,19 @@
 
 	<body>
 		<!-- sticky header -->
-		<header class="sticky-header">
+		<header class="sticky-header d-none d-md-block">
 			<!-- Upper dark header -->
 			<div class="container-fluid bg-black">
 				<div class="container">
 					<div class="row">
 						<div class="col-6 view-left">
 							<a class="navbar-brand" href="https://uscca.deltadefense.com/">
-								<img class="icon py-2" src="img/white_uscca_logo.svg" />
+								<img class="py-2" src="img/white_uscca_logo.svg" />
 							</a>		
 						</div>
-						<div class="col-6 view-right">
-							<a class="presented-by position-relative float-end px-1 py-1" href="#">
-								<span class="fs-12 position-absolute bottom-0 start-0">Presented By:</span>
-								<img class="icon" src="img/grey_deltadefense_logo.svg" />
+						<div class="col-6">
+							<a class="float-end px-1 py-3" href="#">
+								<img class="icon img-fluid" src="img/delta-defense.png" />
 							</a>	
 						</div>
 					</div>
@@ -33,11 +32,11 @@
 			</div>
 			<!-- /end upper dark header -->
 			<!-- Lower grey portion of header -->
-			<div class="container-fluid bg-white">
+			<div class="container-fluid header-banner">
 				<div class="container">
 					<div class="row">
 						<div class="col-12">
-							<div class="header-banner d-flex justify-content-end">
+							<div class="d-flex justify-content-end">
 								<span class="help-text">
 									Here to Help 24/7: <a class="pl-2" href="tel:855-762-9031">800-674-9779 </a>
 								</span>
@@ -339,8 +338,6 @@
 				
 			}
 			
-
-
 			draw();
 			window.addEventListener('resize', draw);
   		</script>

@@ -33,6 +33,9 @@ p{
     top: 0;
     z-index: 9999;
 }
+.header-banner{
+	background:  #f7f7f8;
+}
 .presented-by span{
 	color: #CBCED1;
 }
@@ -40,15 +43,19 @@ p{
 	color: #707070;
 	font-style: italic;
 }
-.help_text a{
+.help-text a{
 	text-decoration: none;
-    color: #444546;
-    font-style: none;
+    font-style: normal;
+    font-weight: bold;
+    color: #707070;
 }
 .content-block{
 	background: #F7F7F8 0% 0% no-repeat padding-box;
 	border-radius: 5px;
 	opacity: 1;
+}
+.icon{
+	width: 150px;
 }
 #dotted-element{
 	height:  100%;
