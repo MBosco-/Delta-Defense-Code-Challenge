@@ -90,4 +90,7 @@ svg{
 	.mobile-margin{
 		margin-bottom:  0px;
 	}
+	.mobile-overlap{
+		margin-top: -55px;
+	}
 }
