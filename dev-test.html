@@ -116,7 +116,7 @@
 					<!-- dotted border element -->
 					<svg xmlns="http://www.w3.org/2000/svg">
 					  <line id="dots" class="line original" stroke-dasharray="3, 3"/>
-					  <circle id="bullet" class="circle original" cx="0" cy="0" r="6"/>
+					  <circle id="bullet" class="circle original" cx="0" cy="0" r="0"/>
 					</svg>
 					<div id="dotted-element"></div>
 					<!-- /end dotted border element -->
@@ -217,6 +217,7 @@
 						circle
 						  .attr('cx', x1)
 						  .attr('cy', y1)
+						  .attr('r', 6)
 					});
 
 					//draw the center column
