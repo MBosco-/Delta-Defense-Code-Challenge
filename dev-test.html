@@ -70,13 +70,12 @@
 				</div>
 			</div>
 		</div>
-		<!-- the desktop/mobile distinction is purely to maintain the order of content for this test. 
-			Otherwise I'd just pull left the dotted border element on mobile and calculate from there  -->
-		<div class="container desktop-content">
+		<!-- Main content -->
+		<div class="container">
 			<div class="row">
 				<!-- page content -->
-				<div class="col-12 col-md-5 py-3">
-					<div class="content-block">
+				<div class="col-11 col-md-5 order-2 order-md-1">
+					<div class="content-block d-none d-md-block">
 						<div class="content-inner">
 							<h3>Online Community</h3>
 							<p>Join fun, gun-friendly conversations with more than 80,000 like-minded Americans on our own ad-free social media platform</p>
@@ -85,7 +84,25 @@
 							<!-- Dynamic injection space -->
 						</svg>
 					</div>
-					<div class="content-block">
+					<div class="content-block d-md-none topmost-content overlap rounded">
+						<div class="content-inner">
+							<h3>Online Community</h3>
+							<p>Join fun, gun-friendly conversations with more than 80,000 like-minded Americans on our own ad-free social media platform</p>
+						</div>
+						<svg xmlns="http://www.w3.org/2000/svg">
+							<!-- Dynamic injection space -->
+						</svg>
+					</div>
+					<div class="content-block d-md-none">
+						<div class="content-inner mobile-margin">
+							<h3>Expert Customer<br/> Engagement Team</h3>
+							<p>100% American-based, the Delta Defense Team are expertly trained on all USCCA products and will help you with any questions you may have</p>
+						</div>
+						<svg xmlns="http://www.w3.org/2000/svg">
+							<!-- Dynamic injection space -->
+						</svg>
+					</div>
+					<div class="content-block d-none d-md-block">
 						<div class="content-inner">
 							<h3>24/7 Critical Response Team Emergency Support</h3>
 							<p>After a self-defense incident, your first call should be to 9-1-1, and your second call will be to this emergency support team who will be your guide through the unanticipated fog of a self‑defense incident.</p>
@@ -95,7 +112,7 @@
 						</svg>
 					</div>
 				</div>
-				<div class="col-md-1 py-3">
+				<div class="col-1 py-3 order-1 order-md-2">
 					<!-- dotted border element -->
 					<svg xmlns="http://www.w3.org/2000/svg">
 					  <line id="dots" class="line original" stroke-dasharray="3, 3"/>
@@ -104,9 +121,10 @@
 					<div id="dotted-element"></div>
 					<!-- /end dotted border element -->
 				</div>
-				<div class="col-12 col-md-6 rounded overlap py-3">
+				<div class="col-1 py-3 order-3 d-block d-md-none"></div>
+				<div class="col-11 col-md-6 rounded overlap order-3">
 					<!-- rightside content layer hovering over hero black background -->
-					<div class="content-block" id="topmost-content">
+					<div class="content-block topmost-content d-none d-md-block">
 						<div class="content-inner overlap-padding">
 							<h3>Expert Customer Engagement Team</h3>
 							<p>100% American-based, the Delta Defense Team are expertly trained on all USCCA products and will help you with any questions you may have</p>
@@ -115,8 +133,7 @@
 							<!-- Dynamic injection space -->
 						</svg>
 					</div>
-
-					<div class="content-block">
+					<div class="content-block display-md-none">
 						<div class="content-inner">
 							<h3>Free Entry to Annual USCCA Expo</h3>
 							<p>USCCA Members get FREE entry to the annual USCCA Concealed Carry & Home Defense Expo [Headed to Fort Worth, TX in November 2022!]</p>
@@ -125,8 +142,16 @@
 							<!-- Dynamic injection space -->
 						</svg>
 					</div>
-
-					<div class="content-block" id="lowest-content">
+					<div class="content-block d-md-none">
+						<div class="content-inner">
+							<h3>24/7 Critical Response Team Emergency Support</h3>
+							<p>After a self-defense incident, your first call should be to 9-1-1, and your second call will be to this emergency support team who will be your guide through the unanticipated fog of a self‑defense incident.</p>
+						</div>
+						<svg xmlns="http://www.w3.org/2000/svg">
+							<!-- Dynamic injection space -->
+						</svg>
+					</div>
+					<div class="content-block lowest-content">
 						<div class="content-inner">
 							<h3>Nationwide Attorney Network</h3>
 							<p>When choosing your criminal defense attorney, you may select a name you already trust or you can handpick one from our growing, nationwide network of more than 1,200 attorneys.</p>
@@ -137,67 +162,6 @@
 					</div>
 				</div>
 			<!-- /end page content -->
-			</div>
-		</div>
-		<div class="container mobile-content">
-			<div class="row">
-				<!-- mobile connectors -->
-				<div class="col-1">
-					<!-- dotted border element -->
-					<svg xmlns="http://www.w3.org/2000/svg">
-					  <line id="dots-mobile" class="line original" stroke-dasharray="3, 3"/>
-					  <circle id="bullet-mobile" class="circle original" cx="0" cy="0" r="6"/>
-					</svg>
-					<div id="dotted-element-mobile"></div>
-					<!-- /end dotted border element -->
-				</div>
-				<div class="col-11 rounded overlap py-3">
-					<div class="content-block" id="topmost-content-mobile">
-						<div class="content-inner">
-							<h3>Online Community</h3>
-							<p>Join fun, gun-friendly conversations with more than 80,000 like-minded Americans on our own ad-free social media platform</p>
-						</div>
-						<svg xmlns="http://www.w3.org/2000/svg">
-							<!-- Dynamic injection space -->
-						</svg>
-					</div>
-					<div class="content-block">
-						<div class="content-inner">
-							<h3>Expert Customer Engagement Team</h3>
-							<p>100% American-based, the Delta Defense Team are expertly trained on all USCCA products and will help you with any questions you may have</p>
-						</div>
-						<svg xmlns="http://www.w3.org/2000/svg">
-							<!-- Dynamic injection space -->
-						</svg>
-					</div>
-					<div class="content-block">
-						<div class="content-inner">
-							<h3>Free Entry to Annual USCCA Expo</h3>
-							<p>USCCA Members get FREE entry to the annual USCCA Concealed Carry & Home Defense Expo [Headed to Fort Worth, TX in November 2022!]</p>
-						</div>
-						<svg xmlns="http://www.w3.org/2000/svg">
-							<!-- Dynamic injection space -->
-						</svg>
-					</div>
-					<div class="content-block">
-						<div class="content-inner">
-							<h3>24/7 Critical Response Team Emergency Support</h3>
-							<p>After a self-defense incident, your first call should be to 9-1-1, and your second call will be to this emergency support team who will be your guide through the unanticipated fog of a self‑defense incident.</p>
-						</div>
-						<svg xmlns="http://www.w3.org/2000/svg">
-							<!-- Dynamic injection space -->
-						</svg>
-					</div>
-					<div class="content-block" id="lowest-content-mobile">
-						<div class="content-inner">
-							<h3>Nationwide Attorney Network</h3>
-							<p>When choosing your criminal defense attorney, you may select a name you already trust or you can handpick one from our growing, nationwide network of more than 1,200 attorneys.</p>
-						</div>
-						<svg xmlns="http://www.w3.org/2000/svg">
-							<!-- Dynamic injection space -->
-						</svg>
-					</div>
-				</div>
 			</div>
 		</div>
 		<script type='text/javascript'>
@@ -215,18 +179,17 @@
 					.attr('x2', 0)
 					.attr('y2', 0);
 
-				//if it isn't display:none, draw the connector for the mobile content 
-				if($(".mobile-content").css('display') !== 'none'){
-					//for each mobile content block, draw the dotted line
-					$(".content-block").each(function(){
+				
+					//for each content block, draw the dotted line
+					$(".content-block:visible").each(function(){
 						//create new line and circle with svg to draw
-						$("#dots-mobile").clone().addClass("clone").removeClass("original").removeAttr("id").appendTo($(this).children("svg"));
-						$("#bullet-mobile").clone().addClass("clone").removeClass("original").removeAttr("id").appendTo($(this).children("svg"));
+						$("#dots").clone().addClass("clone").removeClass("original").removeAttr("id").appendTo($(this).children("svg"));
+						$("#bullet").clone().addClass("clone").removeClass("original").removeAttr("id").appendTo($(this).children("svg"));
 						//references for clarity
 						var line = $(this).find("line.clone");
 						var circle = $(this).find("circle.clone");
 						var origin = $(this);
-						var target = $("#dotted-element-mobile");
+						var target = $("#dotted-element");
 
 						//set origin
 						if(Math.abs(origin.offset().left - target.offset().left) > Math.abs(origin.offset().left+origin.width() - target.offset().left)){
@@ -257,12 +220,12 @@
 					});
 
 					//draw the center column
-					var dots = $("#dots-mobile");
-					var target = $("#dotted-element-mobile");
+					var dots = $("#dots");
+					var target = $("#dotted-element");
 
 					//build some reference for the endpoints
-					var topmost = $("#topmost-content-mobile");
-					var lowest = $("#lowest-content-mobile");
+					var topmost = $(".topmost-content:visible");
+					var lowest = $(".lowest-content:visible");
 
 					//set our offsets relative to the content blocks
 					var x1 = target.offset().left+(target.width()/2);
@@ -276,67 +239,6 @@
 					  .attr('y1', y1)
 					  .attr('x2', x2)
 					  .attr('y2', y2);
-				} else { //else, draw the connectors for the desktop/tablet view
-					//for each content block, draw the dotted line
-					$(".content-block").each(function(){
-						//create new line and circle with svg to draw
-						$("#dots").clone().addClass("clone").removeClass("original").removeAttr("id").appendTo($(this).children("svg"));
-						$("#bullet").clone().addClass("clone").removeClass("original").removeAttr("id").appendTo($(this).children("svg"));
-						//references for clarity
-						var line = $(this).find("line.clone");
-						var circle = $(this).find("circle.clone");
-						var origin = $(this);
-						var target = $("#dotted-element");
-
-						//set origin
-						if(Math.abs(origin.offset().left - target.offset().left) > Math.abs(origin.offset().left+origin.width() - target.offset().left)){
-							//the content-block is on the left
-							var x1 = origin.offset().left+origin.width();
-						} else {
-							//the content-block is on the right
-							var x1 = origin.offset().left;
-						}
-						var y1 = origin.offset().top+(origin.height()/2);
-						
-						//set target
-						var x2 = target.offset().left+target.width()/2;
-						var y2 = origin.offset().top+(origin.height()/2);
-
-						//alter this line's attributes to draw to the centerline of the dotted-element
-						line
-						  .attr('x1', x1)
-						  .attr('y1', y1)
-						  .attr('x2', x2)
-						  .attr('y2', y2);
-
-						//we're drawing the line from the container (origin) to the responsive 
-						//column inbetween (target), so the circle draws at the origin side
-						circle
-						  .attr('cx', x1)
-						  .attr('cy', y1)
-					});
-
-					//draw the center column
-					var dots = $("#dots");
-					var target = $("#dotted-element");
-
-					//build some reference for the endpoints
-					var topmost = $("#topmost-content");
-					var lowest = $("#lowest-content");
-
-					//set our offsets relative to the content blocks
-					var x1 = target.offset().left+(target.width()/2);
-					var y1 = topmost.offset().top+(topmost.height()/2);
-					var x2 = x1;
-					var y2 = lowest.offset().top+(lowest.height()/2);
-
-					//set inline attributes with these function calls
-					dots
-					  .attr('x1', x1)
-					  .attr('y1', y1)
-					  .attr('x2', x2)
-					  .attr('y2', y2);
-				}
 			}
 			
 			//Call the function for first pageload
